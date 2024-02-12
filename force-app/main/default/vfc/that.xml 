@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<apex:page controller="LeadTransferController">
+    <apex:form>
+        <apex:pageMessages />
+        <apex:pageBlock title="Lead Transfer for Management Offices">
+            <apex:pageBlockSection>
+                <apex:pageBlockSectionItem>
+                    <apex:outputLabel value="Select Management Office" />
+                    <apex:selectList value="{!selectedMO}" multiselect="false" size="1">
+                        <apex:selectOptions value="{!managementOffices}" />
+                    </apex:selectList>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem>
+                    <apex:outputLabel value="Select Leads to Transfer" />
+                    <apex:selectList value="{!selectedLeads}" multiselect="true" size="5">
+                        <apex:selectOptions value="{!leadOptions}" />
+                    </apex:selectList>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem>
+                    <apex:outputLabel value="Transfer Reason" />
+                    <apex:inputTextarea value="{!transferReason}" />
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem>
+                    <apex:commandButton value="Transfer Leads" action="{!transferLeads}" />
+                </apex:pageBlockSectionItem>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

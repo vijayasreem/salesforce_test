@@ -1,0 +1,37 @@
+<apex:page controller="LeadTransferController">
+    <apex:form>
+        <apex:pageMessages />
+        
+        <apex:sectionHeader title="Lead Transfer" subtitle="Efficient Collaboration and Distribution" />
+        
+        <apex:pageBlock title="Select Leads to Transfer">
+            <apex:pageBlockTable value="{!leads}" var="lead">
+                <apex:column>
+                    <apex:inputCheckbox value="{!lead.selected}" />
+                </apex:column>
+                <apex:column value="{!lead.Name}" />
+                <apex:column value="{!lead.Company}" />
+                <apex:column value="{!lead.Email}" />
+                <apex:column value="{!lead.Phone}" />
+            </apex:pageBlockTable>
+        </apex:pageBlock>
+        
+        <apex:pageBlock title="Transfer Leads">
+            <apex:pageBlockSection columns="2">
+                <apex:inputField value="{!selectedMO}" label="Transfer to Management Office" />
+                <apex:inputField value="{!transferDate}" label="Transfer Date" />
+            </apex:pageBlockSection>
+            <apex:commandButton value="Transfer" action="{!transferLeads}" rerender="leadTable" />
+        </apex:pageBlock>
+        
+        <apex:pageBlock title="Transferred Leads" id="leadTable">
+            <apex:pageBlockTable value="{!transferredLeads}" var="lead">
+                <apex:column value="{!lead.Name}" />
+                <apex:column value="{!lead.Company}" />
+                <apex:column value="{!lead.Email}" />
+                <apex:column value="{!lead.Phone}" />
+                <apex:column value="{!lead.TransferredDate}" />
+            </apex:pageBlockTable>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>
