@@ -1,0 +1,18 @@
+<aura:component>
+    <aura:attribute name="coiDownloadUrl" type="String" />
+    <aura:attribute name="error" type="String" />
+    
+    <aura:handler name="init" value="{!this}" action="{!c.init}" />
+    
+    <div>
+        <h1>COI Download API</h1>
+        <aura:if isTrue="{!v.error}">
+            <p>Error: {!v.error}</p>
+        </aura:if>
+        <aura:if isTrue="{!v.coiDownloadUrl}">
+            <p>
+                <a href="{!v.coiDownloadUrl}" target="_blank" download>Download COI</a>
+            </p>
+        </aura:if>
+    </div>
+</aura:component>
