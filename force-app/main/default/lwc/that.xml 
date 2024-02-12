@@ -1,0 +1,24 @@
+
+<template>
+  <lightning-card title="Loan Application Document Verification Checklist">
+    <ul>
+      <li>Identification Documents</li>
+      <li>Proof of Income</li>
+      <li>Credit History</li>
+      <li>Employment Details</li>
+    </ul>
+    <p>
+      <lightning-button label="Submit Application" variant="brand" onclick={handleSubmit}></lightning-button>
+    </p>
+  </lightning-card>
+</template>
+
+<script>
+  import { LightningElement } from 'lwc';
+
+  export default class LoanApplicationDocumentVerificationChecklist extends LightningElement {
+    handleSubmit() {
+      // Logic to handle the submission of the loan application
+    }
+  }
+</script>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan Application Document Verification Checklist</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="loanApplicationChecklist"></div>
+
+    <script src="https://unpkg.com/@lwc/engine"></script>
+    <script src="https://unpkg.com/@lwc/synthetic-shadow"></script>
+    <script>
+        class LoanApplicationChecklist extends LWCElement {
+            @track checklistItems = [
+                { label: 'Identification Documents', completed: false },
+                { label: 'Proof of Income', completed: false },
+                { label: 'Credit History', completed: false },
+                { label: 'Employment Details', completed: false }
+            ];
+
+            handleItemChecked(event) {
+                const itemIndex = event.currentTarget.dataset.index;
+                this.checklistItems[itemIndex].completed = event.target.checked;
+            }
+
+            get isSubmitDisabled() {
+                return !this.checklistItems.every(item => item.completed);
+            }
+        }
+
+        customElements.define('loan-application-checklist', LoanApplicationChecklist, { extends: 'div' });
+
+        const mountEl = document.querySelector('#loanApplicationChecklist');
+        const element = new LoanApplicationChecklist();
+        mountEl.appendChild(element);
+    </script>
+</body>
+</html>
