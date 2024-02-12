@@ -1,0 +1,53 @@
+<metadata>
+  <apiVersion>51.0</apiVersion>
+  <status>Active</status>
+</metadata>
+<ApexClass xmlns="http://soap.sforce.com/2006/04/metadata">
+  <apiVersion>51.0</apiVersion>
+  <status>Active</status>
+  <packageVersions>
+    <majorNumber>1</majorNumber>
+    <minorNumber>0</minorNumber>
+    <namespace>loanApplication</namespace>
+  </packageVersions>
+  <type>ApexClass</type>
+  <fullName>LoanApplicationController</fullName>
+  <description>Controller class for car mortgage loan application form</description>
+  <sharingModel>ReadWrite</sharingModel>
+  <isTest>false</isTest>
+  <testClass>false</testClass>
+  <runTests>false</runTests>
+  <runAsUser>System</runAsUser>
+  <visibleInTouch>false</visibleInTouch>
+  <visibleInClassic>true</visibleInClassic>
+  <visibleInLightning>true</visibleInLightning>
+  <visibleInChatter>false</visibleInChatter>
+  <visibleInCommunityBuilder>false</visibleInCommunityBuilder>
+  <visibleInPkgBuilder>true</visibleInPkgBuilder>
+  <visibleInSetup>true</visibleInSetup>
+  <enableHistory>false</enableHistory>
+  <enableSharing>false</enableSharing>
+  <enableStreamingApi>false</enableStreamingApi>
+  <enableActivities>false</enableActivities>
+  <enableAssignments>false</enableAssignments>
+  <enableReports>false</enableReports>
+  <enableEmailTracking>false</enableEmailTracking>
+  <enableDivisions>false</enableDivisions>
+  <enableEnhancedNotes>false</enableEnhancedNotes>
+  <enableFeeds>false</enableFeeds>
+  <enableTopics>false</enableTopics>
+  <enableEntityHistory>false</enableEntityHistory>
+  <enableDataCategories>false</enableDataCategories>
+  <enableS1OfflineCache>false</enableS1OfflineCache>
+  <enableSaveAsDraft>false</enableSaveAsDraft>
+  <enableS1OfflineCacheAndBackgroundSync>false</enableS1OfflineCacheAndBackgroundSync>
+  <enableCascadeDelete>false</enableCascadeDelete>
+  <enableValidation>false</enableValidation>
+  <enableSearch>true</enableSearch>
+  <enableSearchSuggestions>false</enableSearchSuggestions>
+  <enableExternalSharingModel>false</enableExternalSharingModel>
+  <enableChangeDataCapture>false</enableChangeDataCapture>
+  <enableFeedsTracking>false</enableFeedsTracking>
+  <enableQuantitySchedule>false</enableQuantitySchedule>
+  <enableCollaborativeForecasting>false</enableCollaborativeForecasting>
+</ApexClass>
