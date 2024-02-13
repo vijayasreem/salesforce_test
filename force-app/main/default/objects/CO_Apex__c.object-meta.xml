@@ -1,0 +1,21 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <name>Loan_Application__c</name>
+    <label>Loan Application</label>
+    <pluralLabel>Loan Applications</pluralLabel>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <sharingModel>ReadWrite</sharingModel>
+    <nameField>
+        <label>Loan Application Name</label>
+        <displayFormat>{0000}</displayFormat>
+        <type>AutoNumber</type>
+    </nameField>
+    <fields>
+        <!-- Add your mandatory fields here -->
+        <fullName>Email__c</fullName>
+        <label>Email</label>
+        <type>Email</type>
+        <required>true</required>
+    </fields>
+</CustomObject>
