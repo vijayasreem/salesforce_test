@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<userStory>
+  <description>Convenient Options for Car Mortgage Loan Applications: In-Person, Online, Mobile</description>
+  <role>customer</role>
+  <feature>apply for car mortgage loan</feature>
+  <channels>
+    <channel>in-person</channel>
+    <channel>website</channel>
+    <channel>mobile app</channel>
+  </channels>
+</userStory>
