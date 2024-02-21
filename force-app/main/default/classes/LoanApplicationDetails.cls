@@ -1,4 +1,3 @@
-
 public class LoanApplicationDetails {
     
     // Method to retrieve loan application details by Loan ID
@@ -6,7 +5,7 @@ public class LoanApplicationDetails {
         try {
             // Query for the loan application details
             Loan_Application__c loanApplication = [
-                SELECT Id, Name, Email__c
+                SELECT Id, Name, Aadhar_Number__c, Email__c
                 FROM Loan_Application__c
                 WHERE Id = :loanId
                 LIMIT 1
