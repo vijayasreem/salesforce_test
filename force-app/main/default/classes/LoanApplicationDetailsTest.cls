@@ -1,4 +1,3 @@
-
 @IsTest
 private class LoanApplicationDetailsTest {
     
@@ -7,6 +6,7 @@ private class LoanApplicationDetailsTest {
         // Create a test Loan Application record
         Loan_Application__c testLoanApplication = new Loan_Application__c(
             Name = 'Test Loan Application',
+            Aadhar_Number__c = '123456789012',
             Email__c = 'test@example.com'
         );
         
@@ -19,6 +19,7 @@ private class LoanApplicationDetailsTest {
         System.assertEquals(testLoanApplication.Id, retrievedLoanApplication.Id);
         System.assertEquals(testLoanApplication.Name, retrievedLoanApplication.Name);
         System.assertEquals(testLoanApplication.Email__c, retrievedLoanApplication.Email__c);
+        System.assertEquals(testLoanApplication.Aadhar_Number__c, retrievedLoanApplication.Aadhar_Number__c);
     }
     
     @IsTest
